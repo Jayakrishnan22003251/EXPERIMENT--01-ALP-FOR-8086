@@ -2,7 +2,7 @@
 
 ```
 Name : JAYAKRISHNAN L B L
-Roll no : 212222100048
+Roll no : 212222230052
 ```
 
 ## Aim: To Write and execute ALP on fundamental arithmetic and logical operations
