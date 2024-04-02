@@ -1,10 +1,11 @@
-# EXPERIMENT--01-ALP-FOR-8086
+# EXPERIMENT 01- ARITHMETIC OPERATION AND LOGICAL OPERATION IN 8086
 
+```
+Name : JAYAKRISHNAN L B L
+Roll no : 212222100048
+```
 
-
-
-## Aim:
-To Write and execute ALP on fundamental arithmetic and logical operations
+## Aim: To Write and execute ALP on fundamental arithmetic and logical operations
 ## Components required: 8086  emulator 
 ## Theory 
 Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as EMU8086, is an emulator of the program 8086 microprocessor. It is developed with a built-in 8086 assembler. This application is able to run programs on both PC desktops and laptops. This tool is primarily designed to copy or emulate hardware. These include the memory of a program, CPU, RAM, input and output devices, and even the display screen. There are instructions to follow when using this emulator. It can be executed into one of the two ways: backward or forward. There are also examples of assembly source code included. With this, it allows the programming of assembly language, reverse engineering, hardware architecture, and creating miniature operating system (OS). The user interface of 8086 Microprocessor Emulator is simple and easy to manage. There are five major buttons with icons and titles included. These are “Load”, “Reload”, “Step Back”, “Single Step”, and “Run”. Above those buttons is the menu that includes “File”, “View”, “Virtual Devices”, “Virtual Drive”, and “Help”. Below the buttons is a series of choices that are usually in numbers and codes. At the leftmost part is an area called “Registers” with an indication of either “H” or “L”. The other side is divided into two, which enables users to manually reset, debug, flag, etc. What is 8086 emulator emu8086 is an emulator of Intel 8086 (AMD compatible) microprocessor with integrated 8086 assembler and tutorials for beginners. Emulator runs programs like the real microprocessor in step-by-step mode. it shows registers, memory, stack, variables and flags.
@@ -73,69 +74,102 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
 
 ## Programs for arithmetic  operations
-```
-Name :JAYAKRISHNAN L B L
-Roll no : 212222230052
 
-```
-
-## Addition  of 8 bit ALP 
-
-```
-org 100h  
-MOV AL,02H;
-MOV BL,04H;
-ADD AL,BL;
-MOV [2432h],AL;
-ret
-```
-
-## Output  
- ![image](https://github.com/Jayakrishnan22003251/EXPERIMENT--01-ALP-FOR-8086/assets/120232371/a6b50c84-64d5-4784-8bfc-18831b8c6014)
- 
-
-## Subtraction   of 8 bit numbers  ALP 
- ```
+## Addition  
+```python
 org 100h
-MOV Al,05H;
-MOV Bl,04H;
-SUB Al,Bl;
-MOV Cl,Al;
+mov al,024h;
+mov bl,al;
+add bl,al;
+mov [0123h],bl;
 ret
 ```
-## Output  
-![image](https://github.com/Jayakrishnan22003251/EXPERIMENT--01-ALP-FOR-8086/assets/120232371/0dd85de9-21d1-476f-97a6-fd24816fd3ae)
 
-## Multiplication alp 
+## Output  
+ ![OUTPUT](add.png)
+## Subtraction 
+```python
+org 100h
+mov al,024h;
+mov bl,[0123h+02];
+sub bl,al;
+mov [0123h+04],bl;
+ret
 ```
-org 100h  
-MOV CL,00h;
-MOV AL,12H;
-MOV BL,02H;
-MUL BL;
-HLT;
+## Output
+![OUTPUT](sub.png)
+## Multiplication
+```python
+org 100h
+mov bx,0015h;
+mov al,[bx];
+mul bl;
+mov [0015h+04],al;
+ret
 ```
  ## Output  
+![OUTPUT](mul.png)
 
-![image](https://github.com/Jayakrishnan22003251/EXPERIMENT--01-ALP-FOR-8086/assets/120232371/4e7722ef-fef5-464c-8aa2-0b9868d21c2b)
-
-## Division alp 
-```
-org 100h  
-MOV CL,00h;
-MOV AL,40H;
-MOV BL,10H;
-DIV BL;
-RET
+## Division
+```python
+org 100h
+mov bx,0040h;
+mov al,[bx+02];
+div bl;
+mov [0040h+04],al;
+ret
 ```
 ## Output  
-![image](https://github.com/Jayakrishnan22003251/EXPERIMENT--01-ALP-FOR-8086/assets/120232371/214a2b74-aa49-4c40-8691-0ac20248b7c5)
+![OUTPUT](div.png)
+## Programs for logical  operations
 
-
+## AND
+```python
+org 100h
+mov bx,1000h;
+and bx,1111h;
+mov [0040h+02],bx;
+ret
+```
+## Output 
+![OUTPUT](and.png)
+## OR
+```python
+org 100h
+mov ax,[0040h+06];
+mov bx,1000h;
+or ax,bx;
+mov [0040h+02],ax;
+ret
+```
+## Output
+![OUTPUT](or.png)
+## NOT
+```python
+org 100h
+mov bx,0040h;
+mov ax,[bx]; 
+not al;
+mov [0040h+04],ax;
+ret
+```
+## Output
+![OUTPUT](not.png)
+## XOR
+```python
+org 100h
+mov bx,0040h;
+mov ax,[bx]; 
+xor ax,bx;
+mov [0040h+04],ax;
+ret
+```
+## Output
+![OUTPUT](xor.png)
 ## Result :
- 
+Thus, ALP for fundamental arithmetic and logical operations are executed successfully.
 
-Thus, a program is executed on ALP for the fundamental arithmetic and logical operations.
+
 
 
 
