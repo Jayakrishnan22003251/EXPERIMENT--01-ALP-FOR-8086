@@ -75,7 +75,7 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 ```
 Name :JAYAKRISHNAN L B L
 Roll no : 212222230052
-Date of experiment : 20\2\24
+
 ```
 
 ## Addition  of 8 bit ALP 
